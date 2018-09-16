@@ -197,3 +197,7 @@ a {
 a:hover, a:focus, a:active {
   color: #824027;
 }
+
+div.imagetiles div.col-lg-3.col-md-3.col-sm-3.col-xs-6{
+  padding: 0px;
+}
