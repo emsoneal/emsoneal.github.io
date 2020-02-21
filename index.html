@@ -59,7 +59,7 @@
             <a class="nav-link js-scroll-trigger" href="#awards">Leadership</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+            <a class="nav-link js-scroll-trigger" href="#dance">Chance Dance</a>
           </li>
         </ul>
       </div>
@@ -321,19 +321,48 @@
               Cal Poly Salsa</li>
           </ul>
 
-      </section>
+          <div class="container">
+
+<hr class="m-0">
+
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="dance">
+  <div class="my-auto">
+    <h2 class="mb-5">Chance Dance</h2>
+
+
+    <button type="button" class="btn btn-info" onclick="myFunction()"> New Dance</button>
+
     </div>
+    <p id="people"></p>
+    <p id="res"></p>
+    <p id="place"></p>
+    <p id="action"></p>
+    <script>
+    function myFunction() {
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    var restrictions = ["no hands", "no arms", "no right arm", "no left arm"];
+    var restrictions_random = Math.floor(Math.random() * (+(restrictions.length-1) - +0)) + +0;
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    var num_dancers = Math.floor(Math.random() * (+5 - +1)) + +1;
 
-    <!-- Custom scripts for this template -->
-    <script src="js/resume.min.js"></script>
+    var places = ["on the ground", "on wall", "on chair", "outside"];
+    var places_random = Math.floor(Math.random() * (+(places.length-1) - +0)) + +0;
 
-  </body>
+    var actions = ["running", "jumping", "sliding", "walking", "reaching", "grabbing", "breathing", "yelling", "laughing"];
+    var actions_random = Math.floor(Math.random() * (+(actions.length-1) - +0)) + +0;
+
+    var min=4;
+    var max=5;
+    var random = Math.floor(Math.random() * (+max - +min)) + +min;
+    document.getElementById("people").innerHTML = "Number of dancers: " + num_dancers;
+    document.getElementById("res").innerHTML = "restriction: " + restrictions[restrictions_random];
+    document.getElementById("place").innerHTML = "place: " + places[places_random];
+    document.getElementById("action").innerHTML = "action: " + actions[actions_random];
+    }
+    </script>
+
+
+
+</section>
 
 </html>
