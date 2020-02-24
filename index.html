@@ -330,34 +330,56 @@
     <h2 class="mb-5">Chance Dance</h2>
 
 
-    <button type="button" class="btn btn-info" onclick="myFunction()"> New Dance</button>
-
+    <button type="button" class="btn btn-info" onclick="restrictionFunc()"> New Restriction</button>
+    <button type="button" class="btn btn-info" onclick="peopleFunc()"> New Number of People</button>
+    <button type="button" class="btn btn-info" onclick="placeFunc()"> New Place</button>
+    <button type="button" class="btn btn-info" onclick="actionFunc()"> New Action</button>
+    <button type="button" class="btn btn-info" onclick="effortFunc()"> New Effort Quality</button>
     </div>
-    <p id="people"></p>
     <p id="res"></p>
+    <p id="people"></p>
     <p id="place"></p>
     <p id="action"></p>
+    <p id="effort"></p>
     <script>
-    function myFunction() {
+    function restrictionFunc() {
 
     var restrictions = ["no hands", "no arms", "no right arm", "no left arm"];
     var restrictions_random = Math.floor(Math.random() * (+(restrictions.length-1) - +0)) + +0;
 
+
+    document.getElementById("res").innerHTML = "restriction: " + restrictions[restrictions_random];
+
+    }
+    function peopleFunc() {
+
+
     var num_dancers = Math.floor(Math.random() * (+5 - +1)) + +1;
+
+    document.getElementById("people").innerHTML = "Number of dancers: " + num_dancers;
+
+    }
+
+    function placeFunc() {
 
     var places = ["on the ground", "on wall", "on chair", "outside"];
     var places_random = Math.floor(Math.random() * (+(places.length-1) - +0)) + +0;
+    document.getElementById("place").innerHTML = "place: " + places[places_random];
 
+    }
+    function actionFunc() {
     var actions = ["running", "jumping", "sliding", "walking", "reaching", "grabbing", "breathing", "yelling", "laughing"];
     var actions_random = Math.floor(Math.random() * (+(actions.length-1) - +0)) + +0;
 
-    var min=4;
-    var max=5;
-    var random = Math.floor(Math.random() * (+max - +min)) + +min;
-    document.getElementById("people").innerHTML = "Number of dancers: " + num_dancers;
-    document.getElementById("res").innerHTML = "restriction: " + restrictions[restrictions_random];
-    document.getElementById("place").innerHTML = "place: " + places[places_random];
     document.getElementById("action").innerHTML = "action: " + actions[actions_random];
+    }
+
+    function effortFunc() {
+
+    var efforts = ["sustained", "direct", "indirect", "heavy", "light", "quick", "bound", "free"];
+    var efforts_random = Math.floor(Math.random() * (+(efforts.length-1) - +0)) + +0;
+    document.getElementById("effort").innerHTML = "Effort Quality: " + efforts[efforts_random];
+
     }
     </script>
 
