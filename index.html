@@ -353,22 +353,22 @@
     }
     function peopleFunc() {
 
+    var dancers = ["1", "2", "3", "4", "5", "6", "large group", "entire class", "small group"];
+    var num_dancers = Math.floor(Math.random() * (+(dancers.length-1) - +1)) + +1;
 
-    var num_dancers = Math.floor(Math.random() * (+5 - +1)) + +1;
-
-    document.getElementById("people").innerHTML = "Number of dancers: " + num_dancers;
+    document.getElementById("people").innerHTML = "Number of dancers: " + dancers[num_dancers];
 
     }
 
     function placeFunc() {
 
-    var places = ["on the ground", "on wall", "on chair", "outside"];
+    var places = ["on the ground", "by the wall", "on a chair", "outside", "by the door", "by the bars", "awway from the mirror", "spread out", "close together"];
     var places_random = Math.floor(Math.random() * (+(places.length-1) - +0)) + +0;
     document.getElementById("place").innerHTML = "place: " + places[places_random];
 
     }
     function actionFunc() {
-    var actions = ["running", "jumping", "sliding", "walking", "reaching", "grabbing", "breathing", "yelling", "laughing"];
+    var actions = ["running", "jumping", "sliding", "walking", "reaching", "grabbing", "breathing", "yelling", "laughing", "falling", "blinking", "waving", "tripping", "snapping", "typing", "studying", "dying", "crying"];
     var actions_random = Math.floor(Math.random() * (+(actions.length-1) - +0)) + +0;
 
     document.getElementById("action").innerHTML = "action: " + actions[actions_random];
@@ -376,7 +376,7 @@
 
     function effortFunc() {
 
-    var efforts = ["sustained", "direct", "indirect", "heavy", "light", "quick", "bound", "free"];
+    var efforts = ["sustained", "direct", "indirect", "strong", "light", "sudden", "bound", "free"];
     var efforts_random = Math.floor(Math.random() * (+(efforts.length-1) - +0)) + +0;
     document.getElementById("effort").innerHTML = "Effort Quality: " + efforts[efforts_random];
 
