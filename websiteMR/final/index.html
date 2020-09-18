@@ -1,0 +1,66 @@
+<html>
+<h1 id="mixedreality">Controlling a Character Through Body Tracking</h1>
+
+<p>This project uses two body tracking devices, a Kinect and an Axis Nueron Motion Capture suit, to control a robots arm. There are two different scenes, one for each type of body tracking where the user does not need to use controllers to move their arms in virtusl reality.  </p>
+
+<p>The goal of this project was to create a scene where we could eventually test which type of motion capturing system users perfered to controll their characer's arms. We want to be able to test which system feels more emmersive.</p>
+
+<h2 id="Using the Kinect">Using The Kinect</h2>
+
+<p><img src="images/kinect.jpg" width="600" height="250" alt="suit_pic" /></p>
+
+<ul>
+<li>The first scene uses the Kinect Azure which can track multiple bodies in real-time by using many sensors, including cameras. </li>
+
+<li>To convert the raw data into joint positions I used the Azure Kinect DK.</li>
+
+<li>I used a unity package to integrate this unto unity and map the joint positions , given by the Kinect, onto the character's corresponding body parts.</li>
+
+<li>I then made the camera move with the character, while allowing the camera to rotate freely.</li>
+
+<li>Finally, I added simple interactions to see what it felt like to pick up an object in virtual reality without using controllers.</li>
+
+</ul>
+
+<h2 id="Using the Motion Capture Suit">Using the Motion Capture Suit</h2>
+
+<p><img src="images/dance.jpg" width="450" height="350" alt="suit_pic" /></p>
+
+<ul>
+<li>The Axis Neuron Motion Capture suit uses sensors all over the body to track the player position.</li>
+
+<li>Axis Neuron has a package for unity that allows you to use pre-rocorded motion capture data or realtime data to control a character.</li>
+
+<li>My main task was to convert that character into a scene in VR where the camera position followed the eyes, but allowed for independent rotation.</li>
+
+<li>Used pre-recorded data because the suit was not with me.</li>
+</ul>
+
+<h2 id="final">Demo</h2>
+
+<video width="620" height="540" controls>
+  <source src="images/MixedReality.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+
+<h2 id="Download">Download</h2>
+
+<p>Kinect Scene:
+<a href="https://cpslo-my.sharepoint.com/:u:/g/personal/eaoneal_calpoly_edu/EUOcbWCm_tBOm5QNrUHxISoB_IE3V7hWovVvGEFlPg-jpg?e=1CNfeP">DOWNLOAD HERE</a></p>
+
+<p>Motion Capture Scene:
+<a href="https://cpslo-my.sharepoint.com/:u:/g/personal/eaoneal_calpoly_edu/EX84wXhC1nJPq6P7hpuNRD4BvlfzNisC37U35UzyjBcuSQ?e=Fd85rk">DOWNLOAD HERE</a></p>
+
+
+<h2 id="Conclusion">Conclusion</h2>
+
+<p>
+  I thought the motion capture suit allowed for more precise movement of the hands and fingers
+  which I think is important when playing games. This is because the Axis Neuron has sensors on each finger,
+  whereas the kinect had a hard time detecting such small movements. For this reason, I think users would find <thead>
+  suit gives a more immersive experience.
+  </thead>
+</p>
+<p>Emily O'Neal</p>
+</html>
